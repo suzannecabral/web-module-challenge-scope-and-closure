@@ -28,9 +28,15 @@ function processFirstItem(stringList, callback) {
  * 
  * 1. What is the difference between counter1 and counter2?
  * 
+ * #1 counts up each time the function is run. #2 does not.
+ * 
+ * 
  * 2. Which of the two uses a closure? How can you tell?
  * 
+ * #1 uses a closure, because the function counter() accesses a variable outside of its scope (count). Count is declared in the parent function, counterMaker.
+ * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
+ * counter1 is preferable when you want to run the function multiple times and log how many times it's been run.  Counter2 is preferable if you're using it differently and need it to only access information inside the function.
  *
 */
 
