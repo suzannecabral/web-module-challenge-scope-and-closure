@@ -41,6 +41,8 @@ function processFirstItem(stringList, callback) {
 */
 
 // counter1 code
+
+
 function counterMaker() {
   let count = 0;
   return function counter() {
@@ -61,6 +63,9 @@ function counter2() {
 /* Task 2: inning() 
 
 Write a function called `inning` that returns a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
+
+console.log("---------- #2 inning ----------");
+
 
 function inning(){ 
 
@@ -91,6 +96,12 @@ finalScore(inning, 9) might return:
 
 */ 
 
+console.log("---------- #3 finalScore ----------");
+
+//----------------------------
+//nope
+
+
 // function finalScore(inning, inningCount){
 
 //   let teamScores = {
@@ -111,13 +122,100 @@ finalScore(inning, 9) might return:
 // console.log(finalScore);
 
 
-function finalScore(inning){
+//----------------------------
+//also nope 
 
-  let test = inning();
-  console.log(test);
+
+// function finalScore(inning){
+
+//   let test = inning();
+//   console.log(test);
+// }
+
+// finalScore();
+
+//----------------------------
+//sample problem
+
+
+// function functionOne(x){
+//  return x;
+// }
+
+// // functionOne("abc")
+
+// function functionTwo(y){
+//   console.log(y);
+// }
+
+// functionTwo(functionOne("xyz"));
+
+//----------------------------
+// this one works
+
+// function finalScore(x,reps){
+  
+//   let repCount = 0;
+//   for(let i = 0; i < reps; i++){
+//     repCount++;
+//     console.log(i);
+//   }
+//   return `${x} ${repCount}`;
+
+// }
+
+// console.log(finalScore("Xyz",4));
+// console.log(finalScore("Abc",10));
+
+
+
+//----------------------------
+// Trying callback function
+// THIS ONE WORKS
+
+
+
+function finalScore(inning, inningNum){
+
+  let teamScores = {
+    home:0,
+    away:0
+  };
+
+  // for(let i = 0; i < inningNum; i++){
+  //   console.log(`Inning ${i+1}`);
+
+  //   teamScores.home = inning();
+  //   console.log(teamScores.home);
+
+  //   teamScores.away = inning();
+  //   console.log(teamScores.away);
+
+
+  // }
+
+  for(let i = 0; i < inningNum; i++){
+    // teamScores.home = teamScores.home + inning();
+    // teamScores.away = teamScores.away + innning();
+
+    teamScores.home = teamScores.home + inning();
+    teamScores.away = teamScores.away + inning();
+
+    // console.log(inning());
+
+  }
+  
+  console.log(teamScores);
+
 }
 
-finalScore();
+finalScore(inning,9)
+
+
+
+
+
+
 
 /* Task 4: 
 
@@ -139,10 +237,11 @@ and returns the score at each pont in the game, like so:
 9th inning: awayTeam - homeTeam
 Final Score: awayTeam - homeTeam */
 
+console.log("---------- #4 scoreboard ----------");
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard() {
+  
 }
 
-
+//--------------
 //initial commit
